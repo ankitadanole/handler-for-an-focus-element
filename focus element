@@ -1,0 +1,29 @@
+import './App.css';
+import logo from './logo.svg';
+
+function App() {
+  function FocusHandler() {
+    document.getElementsByClassName('important').style.cssText = 'height:50px; width: 50px; background-color:#555; border-radius:0%; display:block; margin-left:auto; margin-right:auto;'
+  }
+  return (
+    <div className="App">
+      <div id='john'>
+        <label>
+          Name
+        </label>
+        <input id='name' onFocus={FocusHandler} style={{ margin: '1em' }}>
+        </input>
+        <label>
+          Phone
+        </label>
+        <input>
+        </input>
+        <h2>Shape</h2>
+        <div className="important">
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
